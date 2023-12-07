@@ -1,3 +1,5 @@
+![Preview](/assets/cover.png)
+
 # Marketspace
 
 Esse projeto é um dos desafios da trilha de React Native do Ignite, nosso bootcamp completo de especialização em React, React Native e Node.js. 🚀
