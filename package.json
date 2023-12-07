@@ -7,9 +7,15 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test:eslint": "echo Running eslint check && eslint .",
-    "test:tsc": "echo Running typescript check && tsc",
-    "test:prettier": "echo Running prettier check && prettier . --check"
+    "fix:eslint": "eslint . --max-warnings=0 --fix",
+    "fix:prettier": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,html,css}": [
+      "npm run fix:prettier",
+      "npm run fix:eslint"
+    ]
   },
   "dependencies": {
     "expo": "~49.0.15",
@@ -20,10 +26,13 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.14",
-    "typescript": "^5.1.3",
     "eslint": "^8.55.0",
     "eslint-config-universe": "^12.0.0",
-    "prettier": "^3.1.0"
+    "git-commit-msg-linter": "^5.0.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.1.3"
   },
   "private": true
 }

@@ -16,6 +16,7 @@ module.exports = {
   plugins: ['react-hooks'],
   rules: {
     'import/order': 'off',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
   env: {
     node: true,
